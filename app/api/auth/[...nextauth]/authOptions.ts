@@ -29,8 +29,8 @@ const authOptions = {
             }
         }),
         Google({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+            clientId: '314956434329-i7c9ghc1e85fi8dr6ahf6ivhkui3j0p2.apps.googleusercontent.com',
+            clientSecret: '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',
         }),
     ],
     session: {
