@@ -29,12 +29,14 @@ const RolePage = () => {
 
   useEffect(() => {
     // checking if the user is authenticated
+    if (typeof window !== 'undefined') {
     const authStatus = localStorage.getItem('authenticated');
     const authenticated:boolean = authStatus ? JSON.parse(authStatus) : false;
     if (!loggedIn && !authenticated) {
       toast.warning('You have to be logged in!');
       router.push('/login');
     }
+  }
 
     setRoleName(jobRoleFormData.roleName);
     setJobDescription(jobRoleFormData.jobDescription);
