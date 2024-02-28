@@ -4,7 +4,7 @@ import React from 'react'
 import RegisterForm from './components/registerForm'
 import Image from 'next/image'
 import RegisterCover from '../../public/assets/Group 485.svg';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 const RegisterPage = () => {
 

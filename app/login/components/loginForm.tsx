@@ -11,7 +11,7 @@ import cross from '../../../public/assets/Red-X.svg';
 import Link from 'next/link';
 import { Toaster, toast } from 'sonner'
 import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { useAtom, atom } from 'jotai';
 import { authAtom } from '@/app/providers/jotaiProvider';
 interface LoginFormProps {
