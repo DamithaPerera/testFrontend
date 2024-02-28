@@ -6,7 +6,6 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RolePageCover from '@/public/assets/Group 487.svg';
 import StarIcon from '@/public/assets/star.svg';
-import LinkIcon from '@/public/assets/link.svg';
 import SendIcon from '@/public/assets/send.svg';
 import { Card, CardBody, Input, Select, Option } from '@material-tailwind/react';
 import RichTextEditor from './components/richTextEditor';
