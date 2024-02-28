@@ -14,7 +14,7 @@ const HeaderDropDown = () => {
       setLoggedIn(false);
       signOut({
         redirect: true,
-        callbackUrl: '/login'
+        callbackUrl: 'http://13.48.204.99:3000/login'
       });
     }
     
