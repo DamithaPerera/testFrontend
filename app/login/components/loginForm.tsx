@@ -111,9 +111,9 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
             <Toaster richColors position='top-center'/>
             <div className='w-full md:w-5/6'>
                 <div className='text-primary-blue px-12 md:px-0'>
-                    <h1 className='font-bold text-2xl mb-6'>Let's Sign You In.</h1>
+                    <h1 className='font-bold text-2xl mb-6'>Let&apos;s Sign You In.</h1>
                     <p className=''>Welcome back</p>
-                    <p className=''>You've been missed!</p>
+                    <p className=''>You&apos;ve been missed!</p>
                 </div>
                 <div className="mt-8 md:w-11/12 w-full px-12 md:px-0">
                     <form onSubmit={handleLogin}>
