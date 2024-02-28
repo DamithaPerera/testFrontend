@@ -87,7 +87,6 @@ const ForgotPasswordForm: React.FC<ForgotPasswordProps> = ({onBack}) => {
     };
     
     const handleBackClick = () => {
-        console.log('d');
         onBack();
     };
     
