@@ -1,9 +1,9 @@
 module.exports = {
     apps : [{
       name: "nextjs-app",
-      script: "npm",
+      instances: 'max',
+      script: 'node_modules/next/dist/bin/next',
       args: "start",
-      cwd: ".next",
       watch: true
     }]
   };
