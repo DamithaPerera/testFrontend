@@ -78,7 +78,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
       try {
         signIn('google', {
           redirect: true,
-          callbackUrl: process.env.CALLBACK_URL || 'http://localhost:3000/role',
+          callbackUrl: process.env.CALLBACK_URL || 'https://finlay-8w4z9kkbd-damithapereras-projects.vercel.app/role',
         });
         setLoggedIn(true);
       } catch (error) {
