@@ -3,7 +3,7 @@ import Image from 'next/image';
 import UserRegisterIcon from '../../public/assets/UserRegister.svg';
 import MainFinlayIconBlue from '../../public/assets/Main Finlay Logo blue.png';
 import UserIcon from '@/public/assets/UserIcon.svg';
-import BellIcon from '@/public/assets/bell.svg';
+import BellIcon from '@/public/assets/Bell.svg';
 import CaretUp from '@/public/assets/caret-up-solid.svg';
 import CaretDown from '@/public/assets/caret-down-solid.svg';
 import NotificationFlag from '@/public/assets/NotificationFlag.svg';
