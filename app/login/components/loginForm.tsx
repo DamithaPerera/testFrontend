@@ -78,7 +78,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
       try {
         signIn('google', {
           redirect: true,
-          callbackUrl: process.env.CALLBACK_URL || 'http://13.60.12.139:3009/role',
+          callbackUrl: process.env.CALLBACK_URL || 'http://localhost:3000/role',
         });
         setLoggedIn(true);
       } catch (error) {

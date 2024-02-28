@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import RolePageCover from '@/public/assets/Group 487.svg';
 import StarIcon from '@/public/assets/star.svg';
+import LinkIcon from '@/public/assets/link.svg';
 import SendIcon from '@/public/assets/send.svg';
 import { Card, CardBody, Input, Select, Option } from '@material-tailwind/react';
 import RichTextEditor from './components/richTextEditor';
@@ -28,14 +29,12 @@ const RolePage = () => {
 
   useEffect(() => {
     // checking if the user is authenticated
-    if (typeof window !== 'undefined') {
     const authStatus = localStorage.getItem('authenticated');
     const authenticated:boolean = authStatus ? JSON.parse(authStatus) : false;
     if (!loggedIn && !authenticated) {
       toast.warning('You have to be logged in!');
       router.push('/login');
     }
-  }
 
     setRoleName(jobRoleFormData.roleName);
     setJobDescription(jobRoleFormData.jobDescription);
@@ -57,8 +56,9 @@ const RolePage = () => {
   const handleCreate = async () => {
     const jobRoleData: JobRoleDto = {
       title: roleName,
-      description: jobDescription
+      description: 'jobDescription'
     } 
+    console.log("🚀 ~ handleCreate ~ jobRoleData:", jobDescription);
     try {
       const res = await createJobRole(jobRoleData);
       // reset form
@@ -72,6 +72,10 @@ const RolePage = () => {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  const handleSkip = () => {
+    router.push('/role-dashboard');
   }
   
   return (
@@ -93,12 +97,17 @@ const RolePage = () => {
 
                 <Input crossOrigin={undefined} type='text' label='Name of the role' onChange={(e) => setRoleName(e.target.value)} value={roleName}></Input>
                 <RichTextEditor setJobDescription={setJobDescription} jobDescription={jobDescription}/>
-                <div className='inline-flex gap-4 justify-self-end justify-end text-sm w-1/2'>
-                  <button type="submit" className='h-10 px-6 rounded-full bg-gray-200 text-gray-500'>Save as draft</button>
-                  <button type="submit" className='h-10 px-6 rounded-full bg-primary-blue text-white inline-flex items-center gap-2' onClick={handleCreate}>
-                    <Image src={SendIcon} alt={'Send'}></Image>
-                    <p>Create</p>
+                <div className='inline-flex justify-between w-full'>
+                  <button type="submit" className='inline-flex items-center justify-self-start h-10 px-6 rounded-full bg-gray-200 text-primary-blue' onClick={handleSkip}>
+                    <p>Skip</p>
                   </button>
+                  <div className='inline-flex gap-4 justify-self-end justify-end text-sm w-1/2'>
+                    <button type="submit" className='h-10 px-6 rounded-full bg-gray-200 text-gray-500'>Save as draft</button>
+                    <button type="submit" className='h-10 px-6 rounded-full bg-primary-blue text-white inline-flex items-center gap-2' onClick={handleCreate}>
+                      <Image src={SendIcon} alt={'Send'}></Image>
+                      <p>Create</p>
+                    </button>
+                  </div>
                 </div>
               </CardBody>
             </Card>
