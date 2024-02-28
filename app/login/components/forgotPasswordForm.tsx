@@ -5,9 +5,9 @@ import Image from 'next/image';
 import check from '../../../public/assets/GreenCheck.svg';
 import cross from '../../../public/assets/Red-X.svg';
 import React, { SyntheticEvent, useState } from 'react'
-import { ERROR_MESSAGES } from '../../../public/constants/messages';
+import { ERROR_MESSAGES } from '@/public/constants/messages';
 import { forgotPassword } from '../services/forgotPasswordService';
-import leftArrow from '../../../public/assets/arrow-left-long-solid.svg';
+import leftArrow from '@/public/assets/arrow-left-long-solid.svg';
 import { Toaster, toast } from 'sonner'
 
 interface ForgotPasswordProps {
@@ -87,7 +87,6 @@ const ForgotPasswordForm: React.FC<ForgotPasswordProps> = ({onBack}) => {
     };
     
     const handleBackClick = () => {
-        
         onBack();
     };
     
@@ -96,7 +95,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordProps> = ({onBack}) => {
         <Toaster richColors position='top-center'/>
         <div className='w-full md:w-5/6'>
                 <div className='text-primary-blue px-12 md:px-0'>
-                    <h1 className='font-bold text-2xl mb-6'>We&apos;ve got you covered!</h1>
+                    <h1 className='font-bold text-2xl mb-6'>We've got you covered!</h1>
                     <p className=''>Create a new password</p>
                 </div>
                 <div className="mt-6 md:w-11/12 w-full px-12 md:px-0">

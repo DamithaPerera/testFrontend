@@ -5,13 +5,13 @@ import Image from 'next/image';
 import { loginUser } from '../services/loginService';
 import React, { SyntheticEvent, useState } from 'react';
 import GoogleIcon from '../../../public/assets/Google.svg';
-import { ERROR_MESSAGES } from '../../../public/constants/messages';
+import { ERROR_MESSAGES } from '@/public/constants/messages';
 import check from '../../../public/assets/GreenCheck.svg';
 import cross from '../../../public/assets/Red-X.svg';
 import Link from 'next/link';
 import { Toaster, toast } from 'sonner'
 import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useAtom, atom } from 'jotai';
 import { authAtom } from '@/app/providers/jotaiProvider';
 interface LoginFormProps {
@@ -78,7 +78,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
       try {
         signIn('google', {
           redirect: true,
-          callbackUrl: process.env.CALLBACK_URL || 'https://finlay-8w4z9kkbd-damithapereras-projects.vercel.app/role',
+          callbackUrl: process.env.CALLBACK_URL || 'http://13.60.12.139:3009/role',
         });
         setLoggedIn(true);
       } catch (error) {
@@ -111,9 +111,9 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
             <Toaster richColors position='top-center'/>
             <div className='w-full md:w-5/6'>
                 <div className='text-primary-blue px-12 md:px-0'>
-                    <h1 className='font-bold text-2xl mb-6'>Let&apos;s Sign You In.</h1>
+                    <h1 className='font-bold text-2xl mb-6'>Let's Sign You In.</h1>
                     <p className=''>Welcome back</p>
-                    <p className=''>You&apos;ve been missed!</p>
+                    <p className=''>You've been missed!</p>
                 </div>
                 <div className="mt-8 md:w-11/12 w-full px-12 md:px-0">
                     <form onSubmit={handleLogin}>

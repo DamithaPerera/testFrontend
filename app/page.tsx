@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import RolePage from './role/page';
 
 export default function Home() {
