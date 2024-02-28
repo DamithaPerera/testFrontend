@@ -33,6 +33,7 @@ const authOptions = {
             clientSecret: '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',
         }),
     ],
+    secret: 'finlay_next_auth_secret',
     session: {
         strategy: strategy
     }
