@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { loginUser } from '../services/loginService';
 import React, { SyntheticEvent, useState } from 'react';
 import GoogleIcon from '../../../public/assets/Google.svg';
-import { ERROR_MESSAGES } from '@/public/constants/messages';
+import { ERROR_MESSAGES } from '../../../public/constants/messages';
 import check from '../../../public/assets/GreenCheck.svg';
 import cross from '../../../public/assets/Red-X.svg';
 import Link from 'next/link';

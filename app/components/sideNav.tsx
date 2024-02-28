@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import ListIcon from "@/public/assets/side-nav/list.svg";
-import MessageIcon from "@/public/assets/side-nav/text-bubble-plus.svg";
-import AwardIcon from "@/public/assets/side-nav/award.svg";
+import ListIcon from "../../public/assets/side-nav/list.svg";
+import MessageIcon from "../../public/assets/side-nav/text-bubble-plus.svg";
+import AwardIcon from "../../public/assets/side-nav/award.svg";
 import {
   Card,
   Typography,

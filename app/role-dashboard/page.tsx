@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import VectorTopLeft from '@/public/assets/role-dashboard/Vector-top-left.svg';
-import VectorBottomRight from '@/public/assets/role-dashboard/Vector-bottom-right.svg';
+import VectorTopLeft from '../../public/assets/role-dashboard/Vector-top-left.svg';
+import VectorBottomRight from '../../public/assets/role-dashboard/Vector-bottom-right.svg';
 import { SideNavComponent } from '../components/sideNav';
 
 const RoleDashboardPage = () => {
