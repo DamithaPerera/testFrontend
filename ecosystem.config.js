@@ -1,6 +1,6 @@
 module.exports = {
     apps : [{
-      name: "next-app",
+      name: "nextjs-app",
       script: "npm",
       args: "start",
       cwd: "node_modules/next/dist/bin/next",
