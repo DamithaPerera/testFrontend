@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && pm2 startOrRestart ecosystem.config.js"
+    "deploy:local": "next build && pm2 startOrRestart ecosystem.config.js --env local"
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.9",
