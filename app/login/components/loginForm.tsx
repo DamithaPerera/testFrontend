@@ -49,7 +49,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
               email: loginFormData.email,
               password: loginFormData.password,
               redirect: false,
-              callbackUrl: process.env.CALLBACK_URL || 'https://finlay-psi.vercel.app/role',
+              callbackUrl: process.env.CALLBACK_URL || 'http://13.48.204.99:3000/role',
             })
             
             res && res.status == 401 && handleErrors(res);
@@ -78,7 +78,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onForgotPassword}) => {
       try {
         signIn('google', {
           redirect: true,
-          callbackUrl: process.env.CALLBACK_URL || 'https://finlay-psi.vercel.app/role',
+          callbackUrl: process.env.CALLBACK_URL || 'http://13.48.204.99:3000/role',
         });
         setLoggedIn(true);
       } catch (error) {
